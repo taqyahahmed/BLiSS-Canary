@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+
+# IDE
+.vscode/
+
+# Generated data
+*.csv
+*.json
+*.db

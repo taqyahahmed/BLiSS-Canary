@@ -1,0 +1,18 @@
+services:
+  influxdb:
+    image: influxdb:2
+    container_name: canary-influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: canary
+      DOCKER_INFLUXDB_INIT_PASSWORD: canary_dev_password
+      DOCKER_INFLUXDB_INIT_ORG: canary
+      DOCKER_INFLUXDB_INIT_BUCKET: sensor_data
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: canary_dev_token_123456789
+
+volumes:
+  influxdb-data:
